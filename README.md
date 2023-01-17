@@ -15,7 +15,7 @@ Business Goal: You are required to model the demand for shared bikes with the av
 
 # General Questions and their Solutions:
 
-From your analysis of the categorical variables from the dataset, what could you infer about their effect on the dependent variable? 
+1. From your analysis of the categorical variables from the dataset, what could you infer about their effect on the dependent variable? 
 
  I have analyzed the categorical variables using boxplot and barplot. Here are some points we can get from visualizations:
 Bookings appear to have increased throughout the fall season. And, from 2018 to 2019, the number of bookings in each season significantly grew.
@@ -25,7 +25,7 @@ There are more reservations on Thursday, Friday, Saturday, and Sunday than at th
 Bookings appear to be lower when it's not a holiday, which makes sense given that during holidays, people would want to stay home and enjoy time with their families.
 
 
-. Why is it important to use drop_first=True during dummy variable creation?  
+2. Why is it important to use drop_first=True during dummy variable creation?  
  drop_first = True is important to use, as it helps in reducing the extra column created during dummy variable creation. 
 
 Hence it reduces the correlations created among dummy variables. Let's imagine we want to build a dummy variable for a categorical column that has three different types of data. If one factor is neither A nor B, then it is clear that C. Thus, we do not require the third variable to locate the C.
@@ -34,7 +34,7 @@ Looking at the pair-plot among the numerical variables, which one has the highes
 Tramp and ateamp are the two variables which are highly correlated to each other.
 Attaching the pair-plot snip here:
 
-4. How did you validate the assumptions of Linear Regression after building the model on the training set? 
+3. How did you validate the assumptions of Linear Regression after building the model on the training set? 
 
 The following criteria are used to validate linear regression models:
 Linearity
@@ -43,7 +43,7 @@ Normality of error
 Homoscedasticity
 Multicollinearity
 
-5. Based on the final model, which are the top 3 features contributing significantly towards explaining the demand of the shared bikes?
+4. Based on the final model, which are the top 3 features contributing significantly towards explaining the demand of the shared bikes?
 The top 3 features contributing significantly towards explaining the demand of the shared bikes – 
  temp  
 winter 
@@ -101,17 +101,16 @@ Scaling is the process of converting data to match a particular scale. It is a p
 
 Differences between standardizing scaling and normalized scaling include:
 
-1. In contrast to standardized scaling, which uses mean and standard deviation for scaling, normalized scaling uses the minimum and maximum value of features.
+* In contrast to standardized scaling, which uses mean and standard deviation for scaling, normalized scaling uses the minimum and maximum value of features.
 
-2. Standardized scaling is used to maintain zero mean and unit standard, whereas normalized scaling is utilized when features are of different scales.
+* Standardized scaling is used to maintain zero mean and unit standard, whereas normalized scaling is utilized when features are of different scales.
 
-3. Standardized scaling does not have or is not constrained to a specific range, whereas normalized scaling scales values between (0,1) and (-1,1).
+* Standardized scaling does not have or is not constrained to a specific range, whereas normalized scaling scales values between (0,1) and (-1,1).
 
-4. Standardized scaling is unaffected by outliers, whereas normalized scaling is influenced by them.
+* Standardized scaling is unaffected by outliers, whereas normalized scaling is influenced by them.
 
-5. Standardized scaling is used when the distribution is normal and normalized scaling is used when we don't know the distribution.
-
-6. Standardized scaling is referred to as Z Score Normalization whereas normalized scaling is referred to as scaling normalization.
+*  Standardized scaling is used when the distribution is normal and normalized scaling is used when we don't know the distribution.
+*  Standardized scaling is referred to as Z Score Normalization whereas normalized scaling is referred to as scaling normalization.
 
 5. You might have observed that sometimes the value of VIF is infinite. Why does this happen? 
 
